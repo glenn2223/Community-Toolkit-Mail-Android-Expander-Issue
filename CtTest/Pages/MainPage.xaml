@@ -1,0 +1,152 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="CtTest.Pages.MainPage"
+	         xmlns:m="clr-namespace:CtTest.Pages"
+             x:DataType="m:MainPage"
+             BackgroundColor="{AppThemeBinding Default=White, Dark=Black}">
+
+    <Grid HorizontalOptions="Fill"
+              VerticalOptions="Fill">
+
+        <ScrollView Padding="10">
+
+            <VerticalStackLayout x:Name="MainStateContainer"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill">
+
+                <mct:StateContainer.StateViews>
+                    <Label mct:StateView.StateKey="Mask"
+                        FontSize="150"
+                        Text="🤫"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="Fill"
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"/>
+                    <Label x:Name="NoCodesLabel"
+                        mct:StateView.StateKey="NoCodes"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        HorizontalOptions="Fill"
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Fill"/>
+                </mct:StateContainer.StateViews>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+                <Label Text="Label item" FontSize="Title"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <mct:Expander x:Name="Expander"
+                      HorizontalOptions="Center"
+				      VerticalOptions="End"
+				      Margin="10"
+				      Direction="Up">
+            <mct:Expander.Header>
+                <Frame Padding="10" 
+                        CornerRadius="20"
+                        HorizontalOptions="Center"
+                        BackgroundColor="{DynamicResource PrimaryColor}">
+                    <Image Source="{OnPlatform WinUI='settings.png',Default='./Resources/Images/settings.svg'}" 
+                        HeightRequest="20" 
+                        WidthRequest="20"
+                        HorizontalOptions="Center"/>
+                    <Frame.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </mct:Expander.Header>
+            <mct:Expander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <Button x:Name="AddButton"
+                            Clicked="AddClicked"
+                            Text="Add"
+                            HorizontalOptions="Start"
+                            VerticalOptions="End"
+                            WidthRequest="100">
+                        <Button.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" />
+                        </Button.GestureRecognizers>
+                    </Button>
+
+                    <Button x:Name="SettingsButton"
+                            Clicked="SettingsClicked"
+                            Text="Settings"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            WidthRequest="100"
+                            Margin="0,0,0,10">
+                        <Button.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" />
+                        </Button.GestureRecognizers>
+                    </Button>
+                </VerticalStackLayout>
+            </mct:Expander.Content>
+        </mct:Expander>
+    </Grid>
+
+</ContentPage>
