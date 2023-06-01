@@ -4,7 +4,7 @@
              x:Class="CtTest.Pages.MainPage"
 	         xmlns:m="clr-namespace:CtTest.Pages"
              x:DataType="m:MainPage"
-             BackgroundColor="{AppThemeBinding Default=White, Dark=Black}">
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
 
     <Grid HorizontalOptions="Fill"
               VerticalOptions="Fill">
@@ -110,7 +110,7 @@
                 <Frame Padding="10" 
                         CornerRadius="20"
                         HorizontalOptions="Center"
-                        BackgroundColor="{DynamicResource PrimaryColor}">
+                        BackgroundColor="{DynamicResource ButtonBackgroundColor}">
                     <Image Source="{OnPlatform WinUI='settings.png',Default='./Resources/Images/settings.svg'}" 
                         HeightRequest="20" 
                         WidthRequest="20"
